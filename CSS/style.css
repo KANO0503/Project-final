@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* font-family: 'Abril Fatface', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+/* font-family: 'IBM Plex Sans KR', sans-serif; */
+
+
+:root {
+    --text-color: #6A7BA2;
+    --background-color: #FFD4D4;
+    --accent-color: #A0C3D2;
+}
+
+
+/* 스크롤 유연하게 구현 */
+html{
+    scroll-behavior: smooth;
+}
+
+body,
+fieldset,
+ul {
+    margin:0;
+    padding: 0;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+
+/* 이미지 위에 텍스트 편집 */
+
+.content-wrap{
+    position: relative;
+}
+.subtitle{
+    font-size: large;
+    position: absolute;
+    color: #ffffff;
+    font-weight: bold;
+    top: 5px;
+    margin: 5px 0px 0px 20px;
+    
+}
+
+.subtitle > a:hover{
+    background-color: var(--background-color);
+    border-radius: 3px;
+    text-shadow: 0px 0px 20px #6A7BA2;
+    color: #ffffff;
+}
+
+.subtitle > a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: x-large;
+    
+}
+
+/* 로그인 페이지 */
+
+.login{
+    width: 380px;
+    margin: 100px auto;
+    font-size: large;
+}
+
+.title,
+.description{
+    text-align: center;
+}
+
+.description{
+    color: gray;
+    font-size: medium;
+    margin: 20px 0;
+}
+form > div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.save-id{
+    justify-content: center;
+}
+
+[type="text"] {
+    width:290px;
+    height:32px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+[type="text"]:read-only {
+    background-color : #ccc
+}
+
+.id,
+.pw {
+    display: flex
+}
+
+.id{
+    margin-left: 14px;
+}
+
+/* 회원가입 페이지 */
+
+.title{
+    color: var(--text-color);
+    font-weight: bold;
+
+}
+
+.join{
+    width: 510px;
+    margin: 80px auto;
+}
+
+.join-form{
+    font-size: large;
+}
+
+fieldset {
+    border:0;
+    margin: 10px 0;
+}
+
+fieldset ul{
+    list-style: none;
+    display: flex;
+    flex: wrap;
+}
+
+.label-width{
+    display: inline-block;
+    width: 70px;
+    margin-left: 40px;
+    gap: 2px;
+}
+
+legend{
+    margin-left:40px;
+}
+
+.user-favoritetema > li{
+    margin-top: 10px;
+}
+
+.user-gender{
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+.user-favoritetema{
+    margin-left: 45px;
+}
+
+.wrap{
+    min-height: 100%;
+    padding-bottom: 60px;
+}
+
+/* popular city 인기도시 */
+
+#location-icon{
+    font-size: xx-large;
+    padding-right: 10px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.popular-city-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.popular-city-list p{
+    font-size: large;
+    font-weight: bold;
+}
+
+
+.popular-city-list img{
+    transition: all 0.2s linear;
+    width: 100%;
+    height: auto;
+}
+
+.city-box:hover img{
+    transform: scale(1.1);
+}
+
+.popular-city-list{
+    display: flex;
+}
+
+
+.city-box{
+    float: left;
+    width: 440px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#city-title{
+    font-family: 'Abril Fatface', cursive;
+    font-size: x-large;
+    color: black;
+}
+
+
+
+/* 여행 일정 계획 순서 */
+
+#plan-order{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: large;
+    margin: 80px 0px 80px 0px;
+}
+
+/* 여행 일정 순서 아이콘 크기 조절 */
+
+#arrow-icon{
+    font-size: large;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+
+/* 여행 일정 계획 순서 폰트 수정 */
+
+.order-title{
+    align-items: center;
+    justify-content: center;
+}
+
+.order-title .step{
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 38px;
+}
+
+.order-title p{
+    font-size: large;
+    text-align: center;
+    color: #636363;
+}
+
+/* 여행 일정 title */
+
+#chat-box{
+    background-color: var(--background-color);
+    text-align: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color: black;
+}
+
+#chat-box p{
+    margin: 0px 0px 0px 0px;
+    line-height: 120%;
+    padding: 8px 0px;
+}
+
+
+#plane-icon{
+    color: var(--text-color);
+}
+
+/* user 여행 일정 입력, 답변 칸 */
+
+/* select태그 선택 클릭하면 사전에 썼던 안내글 사라짐 */
+select option[value=""][disabled] {
+    display: none;
+    font-size: large;
+}
+
+/* 출발지, 여행지 */
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: large;
+    padding-left: 8px;
+}
+select,
+[type="date"]{
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+
+
+/* 출발지, 여행지, 출발일, 도착일 title 글씨 굵게*/
+.chat-container p{
+    font-weight: bold;
+}
+
+/* user 여행 일정 입력, 답변 칸 div 나란히 정렬 */
+
+.chat-container{
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 4px;
+    font-size: large;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.chat-form,
+.chat-answer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.user_input{
+    padding-bottom: 0px 10px 10px 10px;
+}
+
+.chat-form,
+.chat-answer{
+    margin: 10%, 5%;
+}
+
+.chat-form > div{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chat-head{
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* 일정 생성 답변 칸 스타일 */
+#chat-content {
+    resize: none;
+    border: 2px solid var(--accent-color);
+    border-radius: 4px;
+    width: 500px;
+    height: 330px;
+    padding: 20px;
+    font-size: large;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+
+
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.location,
+.travel-date{
+    display: flex;
+    flex-direction: row;
+}
+
+.travel-date input{
+    padding-left: 8px;
+}
+.user_input{
+    display: inline-block;
+    flex-direction: row;
+    margin: 10px 0px 30px 0px;
+}
+
+
+.depart,
+.arrive,
+.depart-airport,
+.arrive-airport{
+    margin: 0px 8px 0px 8px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+/* 출발지, 여행지, 출발일, 도착일 input 간격 조정 */
+
+#start-point,
+#destination {
+    width: 240px;
+    height: 42px;
+    border-radius: 4px;
+    font-size: large;
+}
+#depart-schedule,
+#arrive-schedule {
+    width: 230px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: large;
+}
+
+
+
+
+.field > legend{
+    align-items: center;
+    align-items: center;
+}
+
+.user-tema,
+.user-rent{
+    align-items: center;
+    justify-content: center;
+}
+
+.select{
+    border:0;
+    margin: 20px 0px 10px 0px;
+} 
+
+.select ul{
+    list-style: none;
+    display: flex;
+    flex: wrap;
+}
+
+.select legend{
+    font-weight: bold;
+}
+
+.tema-title,
+.rent-title{
+    margin-bottom: 15px;
+}
+
+.tema-title{
+    padding-right: 20px;
+}
+
+.rent-title{
+    padding-right: 23px;
+}
+
+
+/* 버튼 */
+/* 회원가입, 로그인 버튼 */
+.submit-button {
+    width: 100%;
+    height: 40px;
+    font-size: x-large;
+    font-weight: 500px;
+    border-radius: 4px;
+    margin-top: 10px;
+    border-width: 0 0 3px 0;
+    box-sizing: content-box;
+    position: relative;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: 1px solid rgb(30, 37, 65);
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* 일정생성 버튼, 초기화 버튼 나란히 정렬 */
+.button-edit{
+    display: flex;
+}
+
+/* 일정생성 버튼, 초기화 버튼 margin조절 */
+.create-travel,
+.reset-travel{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+/* 일정생성 버튼 */
+#button{
+    width: 200px;
+    height: 40px;
+    font-size: x-large;
+    font-weight: 500px;
+    margin-top: 10px;
+    border-width: 0 0 3px 0;
+    box-sizing: content-box;
+    position: relative;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 4px;
+    border: 1px solid rgb(30, 37, 65);
+    cursor: pointer;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: bold;
+}
+
+
+.submit-button:active,
+#button:active {
+    border: 0;
+    margin-top: 12px;
+}
+
+.submit-button:disabled
+#button:disabled {
+    background-color: #ccc;
+}
+
+/* 로딩 이미지 가운데 위치 */
+
+#loading-gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* footer */
+.footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100px;
+    display: flex;
+    transform: translateY(0%);
+    font-size: large;
+}
+
+/* icon */
+
+#icon{
+    color: var(--text-color);
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    gap: 20px;
+}
+
+
+/* scroll 버튼 */
+#scroll-btn {
+    cursor: pointer;
+    opacity: 0;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background-color: var(--text-color);
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    font: bold 30px monospace;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+#scroll-btn.show {
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+}
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/9e9931aed0.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/menu.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Join</title>
+</head>
+<body>
+    <!-- 메뉴바 상단 고정 -->
+    <div class="header">
+        <h1>
+            <div class="header-click">
+                <i class="fa-solid fa-globe"></i>
+                    <a href="https://kimyeoju.github.io/Orumi_Project/">Travel Japan</a>
+            </div>
+        </h1>
+        <ul class="menu">
+            <li><a href="./index.html#city-title">이용 방법</a></li>
+            <li><a href="./index.html#chat-box">여행 계획</a></li>
+            <li><a href="./join.html">회원가입</a></li>
+            <li><a href="./login.html">로그인</a></li>
+        </ul>
+        <a href="#" class="header_toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </div>
+    <!-- header -->
+    <div class="join">
+        <div>
+            <h1 class="title">회원가입</h1>
+            <h2 class="description">원활한 서비스 이용을 위해 회원가입을 해주세요</h2>
+        </div>
+        <!-- main -->
+        <!-- 사용자 기본정보 -->
+        <form class="join-form">
+            <div>
+                <label class="label-width" for="user-id">아이디</label>
+                <input type="text" id="user-id" name="UserId">
+            </div>
+            <div>
+                <label class="label-width"for="email">이메일</label>
+                <input type="text" id="user-email" name="UserEmail">
+            </div>
+            <div>
+                <label class="label-width"for="user-pw">비밀번호</label>
+                <input type="text" id="user-pw" name="UserInput">
+            </div>
+            <div>
+                <label class="label-width" for="user-nickname">닉네임</label>
+                <input type="text" id="user-nickname" name="UserNickName">
+            </div>
+            <!-- 사용자 성별 -->
+            <fieldset>
+                <legend>성별</legend>
+                <ul class="user-gender">
+                    <li>
+                    <input type="radio" id="male" name="gender">
+                    <label for="male">남성</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="female" name="gender">
+                        <label for="female">여성</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="choice" name="gender">
+                        <label for="choice">선택 안함</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <!-- 사용자 선호하는 여행테마 -->
+            <fieldset>
+                <legend>선호하는 여행테마</legend>
+                <ul class="user-favoritetema">
+                    <li>
+                        <input type="checkbox" id="food-travel" name="FoodTravel">
+                        <label for="food-travel">식도락</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="nature-travel" name="NatureTravel">
+                        <label for="nature-travel">자연 풍경</label>
+                    </li>
+                    
+                    <li>
+                        <input type="checkbox" id="ruins-travel" names="Ruins">
+                        <label for="ruins-travel">역사 유적</label>
+                    </li>
+                    
+                    <li>
+                        <input type="checkbox" id="activity-travel" name="Activity">
+                        <label for="activity-travel">액티비티</label>
+                    </li>
+                    
+                    <li>
+                        <input type="checkbox" id="sake-travel" name="SakeTravel">
+                        <label for="shopping-travel">쇼핑</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="onsen-travel" name="OnsenTravel">
+                        <label for="onsen-travel">온천</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <!-- 회원가입 버튼 -->
+            <button class="submit-button" type="submit">회원가입</button>
+        </div>
+        </form>
+        <script src="./JS/menu.js"></script>
+    </body>
+    </html>

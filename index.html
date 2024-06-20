@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/9e9931aed0.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/media.css">
+    <link rel="stylesheet" href="./CSS/menu.css">
+    <link rel="stylesheet" href="./CSS/slide.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Travel Japan</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>
+            <div class="header-click">
+                <i class="fa-solid fa-globe"></i>
+                <a href="https://kimyeoju.github.io/Orumi_Project/">Travel Japan</a>
+            </div>
+        </h1>
+        <ul class="menu">
+            <li><a href="#city-title">이용 방법</a></li>
+            <li><a href="#chat-box">여행 계획</a></li>
+            <li><a href="./join.html">회원가입</a></li>
+            <li><a href="./login.html">로그인</a></li>
+        </ul>
+        <a href="#" class="header_toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </header>
+    
+    <!-- main -->
+    <main class="wrap">
+        <div class="content-wrap">
+            <!-- 슬라이드 구현 -->
+            <ul class="slides">
+                <!-- 슬라이드 내용... -->
+            </ul>
+            <!-- 슬라이드 이미지 위에 텍스트 -->
+            <div class="subtitle">
+                <h2>여행의 모든 것 "트래블 재팬"에 오신 것을 환영합니다</h2>
+                <a href="#chat-box">지금 바로 나만의 여행을 생성해보세요 !</a>
+            </div>
+        </div>
+            
+        <!-- 여행 인기 도시 top3 -->
+        <!-- 도시 목록 내용... -->
+
+        <!-- 여행 일정 계획 순서 -->
+        <!-- 일정 계획 내용... -->
+
+        <!-- 여행 일정 title -->
+        <div id="chat-box">
+            <p>나만의 여행 플래너 트래블 재팬</p>
+            <p>어떤 여행을 꿈꾸시나요?<i id="plane-icon"class="fa-solid fa-plane-departure"></i></p>
+        </div>
+
+        <!-- user 여행 일정 입력칸 -->
+        <div class="chat-container">
+            <form class="chat-form" onsubmit="createTravelPlan(event)">
+                <!-- 여행 일정 입력 필드 내용... -->
+                <div class="button-edit">
+                    <!-- 일정생성 버튼 -->
+                    <div class="create-travel">
+                        <button class="submit-button" type="submit" id="button">일정 생성</button>
+                        <div id="loading-gif" style="display: none;">
+                            <img src="./Img/spin.gif" alt="로딩이미지">
+                        </div>
+                    </div>
+                    <!-- 리셋버튼 -->
+                    <div class="reset-travel">
+                        <button id="button" type="reset" onclick="reset()">초기화</button>
+                    </div>
+                </div>
+            </form>
+            <!-- user 여행 일정 답변 칸 -->
+            <div class="chat-answer">
+                <div id="answer">
+                    <textarea
+                    name="content"
+                    id="chat-content"
+                    placeholder="여행 일정이 완성되고 있습니다. 잠시만 기다려주세요 :)"></textarea>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div>
+            <div class="icon">
+                <a href="https://github.com/kimyeoju"><i id="icon"class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/yeoju_uj/"><i id="icon"class="fa-brands fa-instagram"></i></a>
+                <a href="https://m.blog.naver.com/d_d0031?fbclid=PAAaaebyCsm_LHxDJRsaHPkBV37CbW8DErKLOhvhiKhOE8rvDjmURfPpoY19k_aem_th_AYRZifwGLHEk9tZ-Te2Zh-GCO6n2ySLsvv8wOPgJtJxTlTBhPdT0BPMWKik6sbAZ8g0"><i id="icon" class="fa-solid fa-blog"></i></a>
+            </div>
+            Copyright 2023. Travel Japan All rights reserved
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- javascript 연동 -->
+    <script src="./JS/data.js"></script>
+    <script src="./JS/loader.js"></script>
+    <script src="./JS/main.js"></script>
+    <script src="./JS/menu.js"></script>
+    <script src="./JS/reset.js"></script>
+    <script src="./JS/scroll.js"></script>
+    <script src="./JS/gemini.js"></script> <!-- 추가된 스크립트 파일 -->
+</body>
+</html>

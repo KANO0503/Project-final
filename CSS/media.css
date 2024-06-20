@@ -1,0 +1,37 @@
+/* responsive style for iphone 12 Pro */
+
+@media (max-width: 390px) {
+    .popular-city-title h3{
+        margin-left: 50px;
+    }
+
+    .plan-order{
+        
+    }
+
+}
+
+
+/* responsive style for Samsung Galuxy S20 Ultra */
+
+@media (min-width: 391px) and (max-width: 412px) {
+    .order-title,
+    #arrow-icon{
+        width: fit-content;
+    }
+}
+
+
+/* 
+@media (max-width: 390px) {
+    .클래스1 {
+        background-image: none;
+        height: fit-content;
+        }
+    .클래스2 {
+        width: 109vw;
+        font-size:xx-small;
+        margin: none;
+        background-color: none;
+    }
+  } */
