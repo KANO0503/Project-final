@@ -17,7 +17,7 @@
             <h1>
                 <div class="header-click">
                     <i class="fa-solid fa-globe"></i>
-                        <a href="https://kimyeoju.github.io/Orumi_Project/">ZZINMATZIP Japan</a>
+                        <a href="https://kano0503.github.io/Orumi_Project/">ZZINMATZIP Japan</a>
                 </div>
             </h1>
                 <ul class="menu">
@@ -39,7 +39,7 @@
                 <input type="radio" name="radio-btn" id="img-1" checked />
                 <li class="slide-container">
                 <div class="slide">
-                    <img src="./Img/1.jpg"/>
+                    <img src="./Img/3.jpeg"/>
                 </div>
                 <!-- dots -->
                 <div class="nav">
@@ -52,7 +52,7 @@
                 <input type="radio" name="radio-btn" id="img-2" />
                 <li class="slide-container">
                     <div class="slide">
-                        <img src="./Img/2.jpg" />
+                        <img src="2.jpg" />
                     </div>
                 <!-- dots -->
                 <div class="nav">
@@ -119,8 +119,8 @@
             </ul>
             <!-- 슬라이드 이미지 위에 텍스트 -->
             <div class="subtitle">
-                <h2>여행의 모든 것 "트래블 재팬"에 오신 것을 환영합니다</h2>
-                <a href="#chat-box">지금 바로 나만의 여행을 생성해보세요 !</a>
+                <h2>당신의 여행지 맛집 정보 추천 </h2>
+                <a href="#chat-box">찐 하게 즐기는 여행! 찐 로컬 맛집을 알려줄께요 !</a>
             </div>
         </div>
             
@@ -131,17 +131,17 @@
         </div>
         <div class="popular-city-list">
             <div class="city-box">
-                <img src="./Img/tokyo.jpeg">
+                <img src="tokyo.jpeg">
                 <p id="city-title">Tokyo</p>
                 <p>도쿄</p>
             </div>
             <div class="city-box">
-                <img src="./Img/osaka.avif">
+                <img src="osaka.avif">
                 <p id="city-title">Osaka</p>
                 <p>오사카</p>
             </div>
             <div class="city-box">
-                <img src="./Img/hukuoka.jpeg">
+                <img src="hukuoka.jpeg">
                 <p id="city-title">Hukuoka</p>
                 <p>후쿠오카</p>
             </div>
@@ -151,52 +151,30 @@
         <div id="plan-order">
             <div class="order-title">
                 <p class="step">STEP 1</p>
-                <p>출발지 여행지 선택</p>
+                <p>여행지 선택</p>
             </div>
             <i id="arrow-icon"class="fa-solid fa-angle-right"></i>
             <div class="order-title">
                 <p class="step">STEP 2</p>
-                <p>일정 선택</p>
+                <p>메뉴 선택</p>
             </div>
-            <i id="arrow-icon" class="fa-solid fa-angle-right"></i>
-            <div class="order-title">
-                <p class="step">STEP 3</p>
-                <p>여행 테마 선택</p>
-            </div>
-            <i id="arrow-icon" class="fa-solid fa-angle-right"></i>
-            <div class="order-title">
-                <p class="step">STEP 4</p>
-                <p>렌트 여부 선택</p>
-            </div>
+          
+
             <i id="arrow-icon"class="fa-solid fa-angle-right"></i>
             <div class="order-title">
-                <p class="step">STEP 5</p>
-                <p>일정 생성</p>
+                <p class="step">STEP 3</p>
+                <p>맛집 생성</p>
             </div>
         </div>
 
         <!-- 여행 일정 title -->
         <div id="chat-box" >
-            <p>나만의 여행 플래너 트래블 재팬</p>
-            <p>어떤 여행을 꿈꾸시나요?<i id="plane-icon"class="fa-solid fa-plane-departure"></i></p>
+            <p>나만의 달콤한 맛집 플래너 </p>
+            <p>어떤 맛을 꿈꾸시나요?<i id="plane-icon"class="fa-solid fa-plane-departure"></i></p>
         </div>
 
-        <!-- user 여행 일정 입력칸 -->
-            <div class="chat-container">
-                <form class="chat-form" action="post">
-                    <div class="user_input">
-                        <h2 class="chat-head">여행 목적지를 입력해주세요</h2>
-                        <!-- 출발지, 여행지 -->
-                        <div class="location">
-                            <!-- 출발지 -->
-                            <div class="depart-airport">
-                                <p>출발지</p>
-                            <select id="start-point">
-                                <option value="" disabled selected>출발 도시 또는 공항선택</option>
-                                <option name="start-point" value="인천">인천</option>
-                           
-                            </select>
-                        </div>
+    
+    <CENTER>
                         <!-- 여행지 -->
                         <div class="arrive-airport">
                             <p>여행지</p>
@@ -263,7 +241,7 @@
                 </li>
                 <li>
                     <input type="checkbox" id="favorite-spa" name="tema" value="spa">
-                    <label for="favorite-spa">그외</label>
+                    <label for="favorite-spa">그 외</label>
                 </li>
                 </ul>
                 </fieldset>
@@ -271,11 +249,13 @@
                 
                     </fieldset>
                 </div>
-                <!-- 일정생성 버튼, 초기화 버튼 생성 -->
+        
+                <CENTER>
+                    <!-- 일정생성 버튼, 초기화 버튼 생성 -->
                 <div class="button-edit">
                     <!-- 일정생성 버튼 -->
                     <div class="create-travel">
-                        <button class="submit-button" type="submit" id="button" onclick="btnshow()">일정 생성</button>
+                        <button class="submit-button" type="submit" id="button" onclick="btnshow()">맛집 검색</button>
                         <div id="loading-gif" style="display: none;">
                             <img src="./Img/spin.gif" alt="로딩이미지">
                         </div>
@@ -305,11 +285,11 @@
     <footer class="footer">
         <div>
             <div class="icon">
-                <a href="https://github.com/kimyeoju"><i id="icon"class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/yeoju_uj/"><i id="icon"class="fa-brands fa-instagram"></i></a>
-                <a href="https://m.blog.naver.com/d_d0031?fbclid=PAAaaebyCsm_LHxDJRsaHPkBV37CbW8DErKLOhvhiKhOE8rvDjmURfPpoY19k_aem_th_AYRZifwGLHEk9tZ-Te2Zh-GCO6n2ySLsvv8wOPgJtJxTlTBhPdT0BPMWKik6sbAZ8g0" ><i id="icon" class="fa-solid fa-blog"></i></a>
+                <a href=""><i id="icon"class="fa-brands fa-github"></i></a>
+                <a href=""><i id="icon"class="fa-brands fa-instagram"></i></a>
+                <a href="" ><i id="icon" class="fa-solid fa-blog"></i></a>
             </div>
-            Copyright 2023. ZZINMATZIP Japan All rights reserved
+            Copyright 2024. ZZINMATZIP Japan All rights reserved
         </div>
     </footer>
     <!-- footer -->
