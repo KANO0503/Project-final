@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./CSS/menu.css">
     <link rel="stylesheet" href="./CSS/slide.css">
     <link rel="stylesheet" href="./CSS/style.css">
-    <title>Travel Japan</title>
+    <title>ZZINMATZIP Japan</title>
 </head>
 
 <body>
@@ -17,14 +17,13 @@
             <h1>
                 <div class="header-click">
                     <i class="fa-solid fa-globe"></i>
-                        <a href="https://kimyeoju.github.io/Orumi_Project/">Travel Japan</a>
+                        <a href="https://kimyeoju.github.io/Orumi_Project/">ZZINMATZIP Japan</a>
                 </div>
             </h1>
                 <ul class="menu">
                     <li><a href="#city-title">이용 방법</a></li>
                     <li><a href="#chat-box">여행 계획</a></li>
-                    <li><a href="./join.html">회원가입</a></li>
-                    <li><a href="./login.html">로그인</a></li>
+
                 </ul>
                 <a href="#" class="header_toogleBtn">
                     <i class="fas fa-bars"></i>
@@ -186,7 +185,7 @@
             <div class="chat-container">
                 <form class="chat-form" action="post">
                     <div class="user_input">
-                        <h2 class="chat-head">여행 일정을 입력해주세요</h2>
+                        <h2 class="chat-head">여행 목적지를 입력해주세요</h2>
                         <!-- 출발지, 여행지 -->
                         <div class="location">
                             <!-- 출발지 -->
@@ -195,20 +194,7 @@
                             <select id="start-point">
                                 <option value="" disabled selected>출발 도시 또는 공항선택</option>
                                 <option name="start-point" value="인천">인천</option>
-                                <option name="start-point" value="김포">김포</option>
-                                <option name="start-point" value="부산">부산</option>
-                                <option name="start-point" value="광주">광주</option>
-                                <option name="start-point" value="무안">무안</option>
-                                <option name="start-point" value="군산">군산</option>
-                                <option name="start-point" value="대구">대구</option>
-                                <option name="start-point "value="진주(사천)">진주(사천)</option>
-                                <option name="start-point "value="여수">여수</option>
-                                <option name="start-point "value="울산">울산</option>
-                                <option name="start-point "value="원주">원주</option>
-                                <option name="start-point "value="청주">청주</option>
-                                <option name="start-point "value="포항경주">포항경주</option>
-                                <option name="start-point "value="양양">양양</option>
-                                <option name="start-point "value="제주">제주</option>
+                           
                             </select>
                         </div>
                         <!-- 여행지 -->
@@ -247,69 +233,42 @@
                             </select>
                         </div>
                 </div>
-                <!-- 출발일, 도착일 -->
-                <div class="travel-date">
-                    <!-- 출발일 -->
-                    <div class="depart">
-                        <p>출발일</p>
-                        <input id="depart-schedule" type="date" name="depart">
-                    </div>
-                    <!-- 도착일 -->
-                    <div class="arrive">
-                        <p>도착일</p>
-                        <input id="arrive-schedule" type="date" name="arrive">
-                    </div>
-                </div>
+                
             <!-- 선호하는 여행테마 -->
             <div>
                 <fieldset class="select">
                     <div class="tema-title">
-                        <legend>선호하는 여행테마를 선택해주세요</legend>
+                        <legend>선호하는 메뉴를 선택해주세요</legend>
                     </div>
                 <ul class="user-tema">
                 <li>
                     <input type="checkbox" id="favorite-food" name="tema" value="food">
-                            <label for="favorite-food">식도락</label>
+                            <label for="favorite-food">라멘</label>
                 </li>
                 <li>
                     <input type="checkbox" id="favorite-landscape" name="tema"value="landscape">
-                    <label for="favorite-landscape">자연 풍경</label>
+                    <label for="favorite-landscape">스시</label>
                 </li>
                 <li>
                     <input type="checkbox" id="favorite-history" name="tema" value="history">
-                    <label for="favorite-history">역사 유적</label>
+                    <label for="favorite-history">돈까스</label>
                 </li>
                 <li>
                     <input type="checkbox" id="favorite-activity" name="tema" value="activity">
-                    <label for="favorite-activity">액티비티</label>
+                    <label for="favorite-activity">규동</label>
                 </li>
                 <li>
                     <input type="checkbox" id="favorite-shopping" name="tema" value="shopping">
-                    <label for="favorite-shopping">쇼핑</label>
+                    <label for="favorite-shopping">일본가정식</label>
                 </li>
                 <li>
                     <input type="checkbox" id="favorite-spa" name="tema" value="spa">
-                    <label for="favorite-spa">온천</label>
+                    <label for="favorite-spa">그외</label>
                 </li>
                 </ul>
                 </fieldset>
             </div>
-                <!-- 차량 렌트 여부 -->
-                <div>
-                    <fieldset class="select">
-                        <div class="rent-title">
-                            <legend>차량 렌트 하시나요?</legend>
-                        </div>
-                        <ul class="user-rent">
-                            <li>
-                            <input type="radio" id="car-yes" name="car-rent" value="yes">
-                            <label for="car-yes">예</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="car-no" name="car-rent" value="no">
-                                <label for="car-no">아니오</label>
-                            </li>
-                        </ul>
+                
                     </fieldset>
                 </div>
                 <!-- 일정생성 버튼, 초기화 버튼 생성 -->
@@ -335,7 +294,7 @@
                 <textarea
                 name="content"
                 id="chat-content"
-                placeholder="여행 일정이 완성되고 있습니다. 잠시만 기다려주세요 :)"></textarea>
+                placeholder="맛집을 열심히 찾고 있습니다. 잠시만 기다려주세요 :)"></textarea>
             </div>
         </div>
     </div>
@@ -350,7 +309,7 @@
                 <a href="https://www.instagram.com/yeoju_uj/"><i id="icon"class="fa-brands fa-instagram"></i></a>
                 <a href="https://m.blog.naver.com/d_d0031?fbclid=PAAaaebyCsm_LHxDJRsaHPkBV37CbW8DErKLOhvhiKhOE8rvDjmURfPpoY19k_aem_th_AYRZifwGLHEk9tZ-Te2Zh-GCO6n2ySLsvv8wOPgJtJxTlTBhPdT0BPMWKik6sbAZ8g0" ><i id="icon" class="fa-solid fa-blog"></i></a>
             </div>
-            Copyright 2023. Travel Japan All rights reserved
+            Copyright 2023. ZZINMATZIP Japan All rights reserved
         </div>
     </footer>
     <!-- footer -->
