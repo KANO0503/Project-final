@@ -100,7 +100,7 @@ st.markdown('<p>메뉴를 선택후 체크해주세요</p>', unsafe_allow_html=T
 
 # 메뉴 체크박스 추가 
 st.markdown('<div class="menu-container">', unsafe_allow_html=True)
-menu_options = ["라멘", "스시", "오코노미야키", "규동"]
+menu_options = ["라멘", "스시", "오코노미야키", "돈카츠"]
 selected_menus = []
 for menu in menu_options:
     selected = st.checkbox(menu)
