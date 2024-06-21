@@ -83,15 +83,19 @@ st.markdown('<div class="header"><img src="3.jpeg"><h1>현지 데이터 기반 �
 
 # 일본 지역 목록
 japan_regions = [
-    "신주쿠", "시부야 스크램블 교차로", "하라주쿠", "도쿄 타워", "시모키타자와", "아키하바라", "스카이트리",  
-    "도쿄 디즈니랜드", "아사쿠사", "메이지 신궁",
-    "긴자", "우에노 공원", "롯폰기 힐즈" 
+    "홋카이도", "아오모리", "이와테", "미야기", "아키타", "야마가타", "후쿠시마",
+    "이바라키", "토치기", "군마", "사이타마", "치바", "도쿄", "카나가와",
+    "니가타", "도야마", "이시카와", "후쿠이", "야마나시", "나가노", "기후",
+    "시즈오카", "아이치", "미에", "시가", "교토", "오사카", "효고", "나라",
+    "와카야마", "돗토리", "시마네", "오카야마", "히로시마", "야마구치",
+    "도쿠시마", "가가와", "에히메", "고치", "후쿠오카", "사가", "나가사키",
+    "구마모토", "오이타", "미야자키", "가고시마", "오키나와"
 ]
 
 # 목적지 입력 받기
 st.markdown('<div class="main">', unsafe_allow_html=True)
 st.markdown('<div class="input-container">', unsafe_allow_html=True)
-destination_input = st.selectbox("도쿄 내 여행지를 선택해주세요", japan_regions, key="destination_input")
+destination_input = st.selectbox("여행지를 선택해주세요", japan_regions, key="destination_input")
 st.markdown('</div>', unsafe_allow_html=True)
 
 # "메뉴를 선택해주세요" 출력
@@ -100,7 +104,7 @@ st.markdown('<p>메뉴를 선택후 체크해주세요</p>', unsafe_allow_html=T
 
 # 메뉴 체크박스 추가 
 st.markdown('<div class="menu-container">', unsafe_allow_html=True)
-menu_options = ["라멘", "스시", "오코노미야키", "돈카츠"]
+menu_options = ["라멘", "스시", "오코노미야키", "규동"]
 selected_menus = []
 for menu in menu_options:
     selected = st.checkbox(menu)
@@ -116,26 +120,26 @@ st.markdown('</div>', unsafe_allow_html=True)
 if st.button("전송"):
     destination = st.session_state.destination_input
     menu_query = ", ".join(selected_menus)
-    query = f"\"{menu_query}\" {destination} tabelog.com 사이트를 기반으로 입력한 도쿄 지역에 유명 명소에 위치한 현재 영업중인 별 점수가 5점에 가까운 랭킹 1위~5위 맛집, 가게 리뷰, 상세 정보와 가게 정보(주소,전화번호,영업시간,가격대) 함께 추천 해주세요
+    query = f"\"{menu_query}\" {destination} tabelog.com 사이트를 기반으로 일본 지역에 위치한 현재 영업중인 별 점수가 5점에 가까운 랭킹 1위~5위 맛집, 가게 리뷰, 상세 정보와 가게 정보(주소,전화번호,영업시간,가격대) 함께 추천 해주세요"
     
-# "로컬 찐 맛집을 찾고 있어요. 조금만 기다려주세요" 문구 출력
-loading_text = st.empty()
-loading_text.markdown("로컬 찐 맛집을 찾고 있어요. 조금만 기다려주세요...")
+    # "로컬 찐 맛집을 찾고 있어요. 조금만 기다려주세요" 문구 출력
+    loading_text = st.empty()
+    loading_text.markdown("로컬 찐 맛집을 찾고 있어요. 조금만 기다려주세요...")
     
-# spin.gif 이미지 출력
-spinner = st.image("spin.gif", width=200)
+    # spin.gif 이미지 출력
+    spinner = st.image("spin.gif", width=200)
     
-# 모델에 사용자 입력 전달하여 응답 생성
-response = model.generate_content(query)
-# 생성된 응답 출력 (스크롤 가능한 텍스트 상자에)
-response_text = response.candidates[0].content.parts[0].text
+    # 모델에 사용자 입력 전달하여 응답 생성
+    response = model.generate_content(query)
+    # 생성된 응답 출력 (스크롤 가능한 텍스트 상자에)
+    response_text = response.candidates[0].content.parts[0].text
     
-# 응답을 표시하기 전에 loading_text를 클리어합니다.
-loading_text.empty()
-spinner.empty()
+    # 응답을 표시하기 전에 loading_text를 클리어합니다.
+    loading_text.empty()
+    spinner.empty()
     
-st.markdown('<div class="response-container">', unsafe_allow_html=True)
-st.text_area("쩝쩝박사gemini의 답변입니다", value=response_text, height=400)
-st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown('<div class="response-container">', unsafe_allow_html=True)
+    st.text_area("쩝쩝박사gemini의 답변입니다", value=response_text, height=400)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 st.markdown('</div>', unsafe_allow_html=True)  # main div 마감
