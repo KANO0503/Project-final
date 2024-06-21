@@ -118,24 +118,25 @@ if st.button("전송"):
     menu_query = ", ".join(selected_menus)
     query = f"\"{menu_query}\" {destination} tabelog.com 사이트를 기반으로 입력한 도쿄 지역에 유명 명소에 위치한 현재 영업중인 별 점수가 5점에 가까운 랭킹 1위~5위 맛집, 가게 리뷰, 상세 정보와 가게 정보(주소,전화번호,영업시간,가격대) 함께 추천 해주세요
     
-    # "로컬 찐 맛집을 찾고 있어요. 조금만 기다려주세요" 문구 출력
-    loading_text = st.empty()
-    loading_text.markdown("로컬 찐 맛집을 찾고 있어요. 조금만 기다려주세요...")
     
-    # spin.gif 이미지 출력
-    spinner = st.image("spin.gif", width=200)
+# "로컬 찐 맛집을 찾고 있어요. 조금만 기다려주세요" 문구 출력
+loading_text = st.empty()
+loading_text.markdown("로컬 찐 맛집을 찾고 있어요. 조금만 기다려주세요...")
     
-    # 모델에 사용자 입력 전달하여 응답 생성
-    response = model.generate_content(query)
-    # 생성된 응답 출력 (스크롤 가능한 텍스트 상자에)
-    response_text = response.candidates[0].content.parts[0].text
+# spin.gif 이미지 출력
+spinner = st.image("spin.gif", width=200)
     
-    # 응답을 표시하기 전에 loading_text를 클리어합니다.
-    loading_text.empty()
-    spinner.empty()
+# 모델에 사용자 입력 전달하여 응답 생성
+response = model.generate_content(query)
+# 생성된 응답 출력 (스크롤 가능한 텍스트 상자에)
+response_text = response.candidates[0].content.parts[0].text
     
-    st.markdown('<div class="response-container">', unsafe_allow_html=True)
-    st.text_area("쩝쩝박사gemini의 답변입니다", value=response_text, height=400)
-    st.markdown('</div>', unsafe_allow_html=True)
+# 응답을 표시하기 전에 loading_text를 클리어합니다.
+loading_text.empty()
+spinner.empty()
+    
+st.markdown('<div class="response-container">', unsafe_allow_html=True)
+st.text_area("쩝쩝박사gemini의 답변입니다", value=response_text, height=400)
+st.markdown('</div>', unsafe_allow_html=True)
 
 st.markdown('</div>', unsafe_allow_html=True)  # main div 마감
