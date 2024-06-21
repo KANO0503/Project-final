@@ -91,7 +91,7 @@ japan_regions = [
 # 목적지 입력 받기
 st.markdown('<div class="main">', unsafe_allow_html=True)
 st.markdown('<div class="input-container">', unsafe_allow_html=True)
-destination_input = st.selectbox("도쿄 내 유명 여행지를 선택해주세요", japan_regions, key="destination_input")
+destination_input = st.selectbox("도쿄 내 여행지를 선택해주세요", japan_regions, key="destination_input")
 st.markdown('</div>', unsafe_allow_html=True)
 
 # "메뉴를 선택해주세요" 출력
@@ -116,7 +116,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 if st.button("전송"):
     destination = st.session_state.destination_input
     menu_query = ", ".join(selected_menus)
-    query = f"\"{menu_query}\" {destination} tabelog.com 사이트를 기반으로 입력한 도쿄 지역에 유명 명소에 위치한 현재 영업중인 별 점수가 5점에 가까운 랭킹 1위~5위 맛집, 가게 리뷰, 상세 정보와 가게 정보(주소,전화번호,영업시간,가격대) 함께 추천 해주세요"
+    query = f"\"{menu_query}\" {destination} tabelog.jp 사이트를 기반으로 입력된 도쿄 지역에 유명 명소에 위치한 현재 영업중인 별 점수가 5점에 가까운 랭킹 1위~5위 맛집, 가게 리뷰, 상세 정보와 가게 정보(주소,전화번호,영업시간,가격대) 함께 추천 해주세요"
     
     # "로컬 찐 맛집을 찾고 있어요. 조금만 기다려주세요" 문구 출력
     loading_text = st.empty()
