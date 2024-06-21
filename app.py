@@ -91,7 +91,7 @@ japan_regions = [
 # 목적지 입력 받기
 st.markdown('<div class="main">', unsafe_allow_html=True)
 st.markdown('<div class="input-container">', unsafe_allow_html=True)
-destination_input = st.selectbox("도쿄내 유명 여행지를 선택해주세요", japan_regions, key="destination_input")
+destination_input = st.selectbox("도쿄 내 유명 여행지를 선택해주세요", japan_regions, key="destination_input")
 st.markdown('</div>', unsafe_allow_html=True)
 
 # "메뉴를 선택해주세요" 출력
