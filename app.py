@@ -83,8 +83,8 @@ st.markdown('<div class="header"><img src="3.jpeg"><h1>현지 데이터 기반 �
 
 # 일본 지역 목록
 japan_regions = [
-    "하라주쿠", "도쿄 타워", "시모키타자와", "아키하바라", "스카이트리",  
-    "도쿄 디즈니랜드", "시부야 교차로", "신주쿠 교엔", "아사쿠사", "메이지 신궁",
+    "신주쿠", "시부야 교차로", "하라주쿠", "도쿄 타워", "시모키타자와", "아키하바라", "스카이트리",  
+    "도쿄 디즈니랜드", "신주쿠 교엔", "아사쿠사", "메이지 신궁",
     "긴자", "우에노 공원", "롯폰기 힐즈", 
 ]
 
@@ -116,7 +116,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 if st.button("전송"):
     destination = st.session_state.destination_input
     menu_query = ", ".join(selected_menus)
-    query = f"\"{menu_query}\" {destination} tabelog.com/tokyo 사이트를 기반으로 입력된 도쿄 지역에 유명 명소 근처에 위치한 현재 영업중인 별 점수가 5점에 가까운 랭킹 1위~5위 맛집, 가게 리뷰, 상세 정보와 가게 정보(주소,전화번호,영업시간,가격대) 함께 추천 해주세요"
+    query = f"\"{menu_query}\" {destination} tabelog.com/tokyo 사이트를 기반으로 입력된 도쿄 지역에 유명 명소 근처에 위치한 현재 영업중인 별 점수가 5점에 가까운 랭킹 1위~5위 맛집, 가게 리뷰, 상세 정보와 가게 정보(일본어 가게명과 매치된 주소,전화번호,영업시간,가격대) 함께 추천 해주세요"
     
     # "로컬 찐 맛집을 찾고 있어요. 조금만 기다려주세요" 문구 출력
     loading_text = st.empty()
