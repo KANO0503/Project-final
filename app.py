@@ -116,7 +116,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 if st.button("전송"):
     destination = st.session_state.destination_input
     menu_query = ", ".join(selected_menus)
-    query = f"\"{menu_query}\" {destination} www.google.com/maps & tabelog.com 사이트를 기반으로 일본 지역에 위치한 현재 영업중인 별 점수가 5점에 가까운 랭킹 1위~5위 맛집의 가게 리뷰, 상세 정보와 가게 정보(주소,전화번호,영업시간,가격대) 함께 알려주세요"
+    query = f"\"{menu_query}\" {destination} www.google.com & tabelog.com & hotpepper.jp & gnavi.co.jp & retty.me 사이트들의 종합적인 내용을 기반으로 일본 지역에 위치한 현재 영업중인 별 점수가 5점에 가까운 랭킹 1위~5위 맛집의 가게 리뷰, 상세 정보와 가게 정보(주소,전화번호,영업시간,가격대) 함께 알려주세요"
     
     # "로컬 찐 맛집을 찾고 있어요. 조금만 기다려주세요" 문구 출력
     loading_text = st.empty()
